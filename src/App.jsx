@@ -1,13 +1,14 @@
 import { useState } from "react";
-import "./App.css";
+
 import PostList from "./components/PostList";
+import Home from "./components/Home";
 
 function App() {
   return (
-    <>
-      <h1>Your Blogs</h1>
+    <div>
+      <Home />
       <PostList />
-    </>
+    </div>
   );
 }
 
