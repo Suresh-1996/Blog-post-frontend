@@ -9,6 +9,7 @@ A simple, full-stack web application built with React, Tailwind CSS, Node.js,Exp
 - built with Reactjs, Tailwind CSS (Responsive).
 - User can create account itself and view Blogs.
 - Axios used for http manage
+- Used JWT token for authenticate users
 
 ## Setup Instructions
 
