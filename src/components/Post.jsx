@@ -5,6 +5,8 @@ const Post = () => {
   const location = useLocation();
   const { post } = location.state;
   const { id } = useParams();
+  // const user_token = localStorage.getItem("user_token");
+  // console.log(user_token);
   return (
     <div className="flex w-full flex-col ">
       <div className="mx-40 mt-10 font-bold text-[60px] mb-5">

@@ -23,13 +23,13 @@ const PostList = () => {
   useEffect(() => {
     fetch();
 
-    socket.on("newPost", () => {
+    socket.on("postUpdate", () => {
       fetch(); // Fetch latest posts when notified
     });
 
     // Clean up the socket listener when the component is unmounted
     return () => {
-      socket.off("newPost");
+      socket.off("postUpdate");
     };
   }, []);
 
