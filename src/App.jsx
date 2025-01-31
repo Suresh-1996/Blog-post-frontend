@@ -8,6 +8,7 @@ import UserSignup from "./components/UserSignup";
 import ProtectedRoutes from "./routes/ProtectedRoutes";
 import UserLogin from "./components/UserLogin";
 import Post from "./components/Post";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
                 <Navbar />
                 <Home />
                 <PostList />
+                <Footer />
               </>
             </ProtectedRoutes>
           }
