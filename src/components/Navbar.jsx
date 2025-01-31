@@ -19,25 +19,6 @@ const Navbar = () => {
     navigate("/");
   };
   return (
-    // <div className="flex  bg-slate-200 p-5 justify-between ">
-    //   <div className="flex text-gray-600  gap-3 items-center justify-center">
-    //     <h1 className=" text-[10px] font-medium md:text-base">
-    //       Welcome ! {user_name}{" "}
-    //     </h1>
-    //     {/* <h1 className="text-[10px] font-bold  md:text-base">
-    //       Post Your Blog post
-    //     </h1> */}
-    //   </div>
-
-    //   <div className="flex  mx-5 gap-2">
-    //     <button
-    //       className="bg-red-600  rounded-lg p-1 md:px-3 md:text-sm text-[10px]"
-    //       onClick={handleLogout}
-    //     >
-    //       Logout
-    //     </button>
-    //   </div>
-    // </div>
     <nav className=" bg-white shadow-md h-24 ">
       <div className="max-w-10xl mx-auto px-4 sm:px-6 lg:px-8 h-full">
         <div className="flex justify-between  h-full items-center">
