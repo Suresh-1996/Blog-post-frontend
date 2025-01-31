@@ -10,17 +10,6 @@ const PostList = () => {
   const [posts, setPosts] = useState([]);
   const [filterdPosts, setFilteredPosts] = useState("");
 
-  const fetch = async () => {
-    try {
-      const response = await axios.get(`http://localhost:5000/api/posts`);
-      setPosts(response.data);
-      console.log("Successfully retive posts");
-    } catch (error) {
-      console.log("Error retive posts");
-      console.error(error);
-    }
-  };
-
   useEffect(() => {
     fetch();
 
@@ -33,6 +22,32 @@ const PostList = () => {
       socket.off("postUpdate");
     };
   }, []);
+
+  const fetch = async () => {
+    try {
+      const response = await axios.get(`http://localhost:5000/api/posts`);
+      setPosts(response.data);
+      console.log("Successfully retive posts");
+    } catch (error) {
+      console.log("Error retive posts");
+      console.error(error);
+    }
+  };
+
+  const formatDate = (dateString) => {
+    const date = new Date(dateString);
+
+    return date
+      .toLocaleString("en-US", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+        hour12: true,
+      })
+      .replace(",", "");
+  };
 
   const filterBlogs = posts.filter((post) =>
     post.title.toLowerCase().includes(filterdPosts.toLowerCase())
@@ -83,8 +98,10 @@ const PostList = () => {
                         className="w-[100px] h-[50px]  m-1 "
                       />
                       <div className="grid grid-rows-2 ml-3 ">
-                        <h3>Fzone Solution</h3>
-                        <p>date</p>
+                        <h3 className="font-medium">Fzone Solution</h3>
+                        <p className="text-sm font-light">
+                          {formatDate(post.createdAt)}
+                        </p>
                       </div>
                     </div>
                   </Link>
