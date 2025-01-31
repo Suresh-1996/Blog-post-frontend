@@ -30,14 +30,14 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-4">
             <a
               className="p-2 font-medium px-4 group hover:text-purple-600"
-              href="/"
+              href="#"
             >
               Home
               <div className="bg-purple-700 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
             </a>
             <a
               className="p-2 font-medium px-4 group hover:text-purple-600"
-              href="/"
+              href="#"
             >
               Services
               <div className="bg-purple-700 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
