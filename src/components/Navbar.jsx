@@ -30,7 +30,7 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-4">
             <a
               className="p-2 font-medium px-4 group hover:text-purple-600"
-              href="#"
+              href="/home"
             >
               Home
               <div className="bg-purple-700 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>
@@ -51,7 +51,7 @@ const Navbar = () => {
             </a>
             <a
               className="p-2 font-medium px-4 group  hover:text-purple-600"
-              href="#"
+              href="/contact"
             >
               Contact Us
               <div className="bg-purple-700 h-[2px] w-0 group-hover:w-full transition-all duration-500"></div>

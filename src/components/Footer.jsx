@@ -13,16 +13,16 @@ export const Footer = () => {
     <div className="flex   mt-5 w-full text-white gap-3 flex-col items-center justify-center bg-purple-900">
       <div className="mt-10">
         <img
-          src="../public/Logo-removebg.png"
+          src="/Logo-removebg.png"
           alt="logo"
           className="w-[150px] h-[100px]"
         />
       </div>
-      <p className="font-semibold text-base p-2 ">
+      <p className="font-semibold text-[12px] sm:text-base md:p-2 mx-3 text-center">
         Explore more insightful articles, tips, and stories, your go-to
         destination for inspiration, knowledge, and creativity
       </p>
-      <div className="grid grid-cols-2 font-light text-sm gap-x-6 underline">
+      <div className="grid grid-cols-2 grid-rows-2 font-light text-sm gap-x-6 underline">
         <p className="flex items-center ">
           <a href="mailto:info@fzone.lk" className="flex items-center">
             <EnvelopeIcon className="w-5 h-5 mr-2" />
@@ -37,7 +37,7 @@ export const Footer = () => {
           </a>
         </p>
       </div>
-      <div className="flex flex-row font-bold gap-9 ">
+      <div className="flex flex-row   font-bold sm:gap-9 gap-2 ">
         <div>
           <a href="#" className="hover:underline">
             Home
@@ -60,7 +60,7 @@ export const Footer = () => {
         </div>
         <div></div>
       </div>
-      <div className="flex flex-row gap-x-5 mt-5">
+      <div className="flex flex-row gap-x-5 mt-5 ">
         <div className="flex justify-center items-center hover:bg-[#5C0091]  bg-[#7D00C5] rounded-full w-[45px] h-[45px]">
           <a href="#" className="justify-items-center ">
             <FaFacebookF className="scale-[2]" />

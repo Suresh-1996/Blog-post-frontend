@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import PostList from "./components/PostList";
 import Home from "./components/Home";
@@ -9,8 +9,13 @@ import ProtectedRoutes from "./routes/ProtectedRoutes";
 import UserLogin from "./components/UserLogin";
 import Post from "./components/Post";
 import { Footer } from "./components/Footer";
+import { Contact } from "./components/Contact";
 
 function App() {
+  // Scroll to top on page load or refresh
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <Router>
       <Routes>
@@ -34,7 +39,18 @@ function App() {
           path="home/post/:id"
           element={
             <ProtectedRoutes>
+              <Navbar />
               <Post />
+              <Footer />
+            </ProtectedRoutes>
+          }
+        />
+        <Route
+          path="/contact"
+          element={
+            <ProtectedRoutes>
+              <Contact />
+              <Footer />
             </ProtectedRoutes>
           }
         />
